@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.cartaodecidadao.pt/tipos/ama"  xmlns:el="http://www.cartaodecidadao.pt/tipos/comum/cidadao"
+	targetNamespace="http://www.cartaodecidadao.pt/tipos/ama" elementFormDefault="qualified">
+ 
+ <xsd:import namespace="http://www.cartaodecidadao.pt/tipos/comum/cidadao" schemaLocation="ContactosElements.xsd"/>
+ 
+	<xsd:element name="Contactos">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="el:TelefoneMovel" minOccurs="0" />
+				<xsd:element ref="el:CorreioElectronico" minOccurs="0" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

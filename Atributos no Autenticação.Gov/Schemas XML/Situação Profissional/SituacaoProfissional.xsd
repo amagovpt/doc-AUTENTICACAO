@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<schema
+	elementFormDefault="qualified"
+	targetNamespace="http://ama.pi/bpel/aberturadeconta"
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://ama.pi/bpel/aberturadeconta">
+			<complexType name="SitProfissionalAberturaDeContaResponseType">
+				<sequence>
+					<element name="infoII" type="tns:infoIIType"/>
+					<element name="infoCGA" type="tns:infoCGAType"/>
+				</sequence>
+			</complexType>
+
+			<!-- II -->
+			<complexType name="infoIIType">
+				<sequence>
+					<element name="dataRetorno" type="dateTime"/>
+					<element name="codigoResultado" type="int"/>
+					<element name="situacaoProfissional" type="string" minOccurs="0" />
+					<element name="infoEE" type="tns:entidadeEmpregadora" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</complexType>
+			<complexType name="entidadeEmpregadora">
+				<sequence>
+					<element minOccurs="0" name="nipc" type="long"/>
+					<element minOccurs="0" name="firmadenom" type="string"/>		  
+					<element minOccurs="0" name="validacao" type="string"/>
+					<element minOccurs="0" name="nisspc" type="long"/>
+					<element minOccurs="0" name="nissps" type="long"/>
+				</sequence> 
+			</complexType>
+
+			<!-- CGA -->
+			<complexType name="infoCGAType">
+				<sequence>
+					<element name="nrSubscritorCGA" type="int"/>
+					<element name="nome" type="string" minOccurs="0"/> 
+					<element name="dataNascimento" type="dateTime"/>		
+					<element name="dataObito" type="dateTime"/>  
+					<element name="codSituacaoFuncional" type="string"/>  
+					<element name="codigoResultado" type="int"/>  
+					<element name="mensagem" type="string" minOccurs="0"/>  
+					<element name="lstEntEmpregadora" type="tns:lstEntEmpregadora" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</complexType>
+			<complexType name="ElementoEntEmpregadora">
+				<sequence>
+					<element name="entEmpregadora" type="string"/>
+				</sequence>
+			</complexType>
+			<complexType name="lstEntEmpregadora">
+				<sequence>
+					<element name="ElementoEntEmpregadora" type="tns:ElementoEntEmpregadora"/>
+				</sequence> 
+			</complexType>
+			
+
+			<element name="SitProfissionalAberturaDeContaResponse" type="tns:SitProfissionalAberturaDeContaResponseType"/>
+</schema>

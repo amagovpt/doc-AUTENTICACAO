@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.cartaodecidadao.pt/tipos/comum/cidadao"
+	targetNamespace="http://www.cartaodecidadao.pt/tipos/comum/cidadao" elementFormDefault="qualified">
+
+	<xsd:element name="TelefoneMovel">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="IndicativoPais" minOccurs="0">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:pattern value="[0-9]{1,3}" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="Numero" minOccurs="0">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:pattern value="[0-9]{1,20}" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="CorreioElectronico">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:pattern value="[0-9A-Za-z'\.\-_]{1,127}@[0-9A-Za-z'\.\-_]{1,127}" />
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+
+</xsd:schema>

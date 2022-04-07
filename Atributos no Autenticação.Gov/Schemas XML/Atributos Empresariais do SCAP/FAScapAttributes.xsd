@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.scap.autenticacao.gov.pt/FAScapAttributes"
+	xmlns:tns="http://www.scap.autenticacao.gov.pt/FAScapAttributes" elementFormDefault="qualified">
+
+    <element name="ScapAttributes" type="tns:ScapAttributes"></element>
+    
+    <complexType name="ScapAttributes">
+    	<sequence>
+    		<element name="AttributeSupplier" type="tns:AttributeSupplier" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="AttributeSupplier">
+    	<sequence>
+    		<element name="Name" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Nipc" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Attributes" type="tns:Attributes" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="Attributes">
+    	<sequence>
+    		<element name="Attribute" type="tns:Attribute" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="Attribute">
+    	<sequence>
+    		<element name="Name" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="IdentifiableName" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="SubAttributes" type="tns:SubAttributes" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="SubAttributes">
+    	<sequence>
+    		<element name="SubAttribute" type="tns:SubAttribute" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="SubAttribute">
+    	<sequence>
+    		<element name="Description" type="string" maxOccurs="1" minOccurs="1"></element>
+    		<element name="Value" type="string" maxOccurs="1" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+</schema>
