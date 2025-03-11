@@ -10,10 +10,10 @@ Este repositório contêm a documentação técnica relativamente ao serviço de
 
 ## Estrutura da documentação
 
-* Na pasta **SAML** encontram-se as instruções e os formulários a entregar para a configuração de um fornecedor de serviço nos ambientes disponíveis (ambiente de pré-produção e ambiente de produção) utilizando SAML.
-* Na pasta **OAuth** encontram-se as instruções e os formulários a entregar para a configuração de um fornecedor de serviço nos ambientes disponíveis (ambiente de pré-produção e ambiente de produção) utilizando OAuth.
-* Na pasta **Atributos no Autenticação.Gov<span>** está acessível a lista de atributos disponíveis no Autenticação.Gov<span> e as *schemas* xml dos atributos que são devolvidos neste formato.
-* Na pasta **logotipos** estão disponíveis os logotipos do Autenticação.Gov<span> para utilização mediante consulta prévia.
+* Na pasta [SAML](./SAML) encontram-se as instruções e os formulários a entregar para a configuração de um fornecedor de serviço nos ambientes disponíveis (ambiente de pré-produção e ambiente de produção) utilizando SAML.
+* Na pasta [OAuth](./OAuth) encontram-se as instruções e os formulários a entregar para a configuração de um fornecedor de serviço nos ambientes disponíveis (ambiente de pré-produção e ambiente de produção) utilizando OAuth.
+* Na pasta [Atributos no Autenticação.Gov](<Atributos no Autenticação.Gov>) está acessível a lista de atributos disponíveis no Autenticação.Gov<span> e as *schemas* xml dos atributos que são devolvidos neste formato.
+* Na pasta [logotipos](./logotipos) estão disponíveis os logotipos do Autenticação.Gov<span> para utilização mediante consulta prévia.
 * [Manual de integração do Autenticacao.Gov (download pdf)](https://amagovpt.github.io/doc-AUTENTICACAO/Autenticação.Gov_CMD&#32;-&#32;Manual&#32;de&#32;Integração.pdf)
 * [Guia rápido de utilização do OAuth2 (download pdf)](https://amagovpt.github.io/doc-AUTENTICACAO/OAuth2/Guia&#32;rápido&#32;de&#32;utilização&#32;do&#32;OAuth2.pdf)
 
